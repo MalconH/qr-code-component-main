@@ -1,0 +1,125 @@
+/* Resets */
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+  --color-white: hsl(0, 0%, 100%);
+  --color-light-gray: hsl(212, 45%, 89%);
+  --color-grayish-blue: hsl(220, 15%, 55%);
+  --color-dark-blue: hsl(218, 44%, 22%);
+
+  --font-family: "Outfit", sans-serif;
+  --font-weight-reg: 400;
+  --font-weight-bold: 700;
+  --font-size-p: 0.9375rem;
+}
+
+/* Global Styles */
+*::selection {
+  background-color: var(--color-dark-blue);
+  color: var(--color-white);
+}
+
+.bold {
+  color: var(--color-dark-blue);
+  font-weight: 700;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  row-gap: 2rem;
+
+  background-color: var(--color-light-gray);
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-family: var(--font-family);
+  margin-top: 1rem;
+}
+
+.qr-component {
+  background-color: var(--color-white);
+  font-size: var(--font-size-p);
+
+  width: 21em;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75em;
+  border-radius: 1em;
+}
+
+.qr-component__img-container {
+  color: var(--color-dark-blue);
+  background-color: var(--color-light-gray);
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  height: auto;
+  border-radius: 0.75em;
+  overflow: hidden;
+  object-fit: cover;
+}
+
+.img-container__qr {
+  display: block;
+  width: 100%;
+}
+
+.qr-component__text {
+  margin: 0 1em;
+  text-align: center;
+}
+
+.qr-component__title {
+  font-size: 1.5em;
+  color: var(--color-dark-blue);
+  font-weight: var(--font-weight-bold);
+  line-height: 1.25em;
+  margin-bottom: 0.75em;
+}
+
+.qr-component__p {
+  font-family: 1em;
+  color: var(--color-grayish-blue);
+  margin-bottom: 1.5em;
+}
+
+.footer {
+  width: 100%;
+}
+
+.attribution {
+  font-family: var(--font-family);
+  font-size: var(--font-size-p);
+  padding: 1rem;
+
+  background-color: var(--color-white);
+  text-align: center;
+  border-radius: 1rem 1rem 0 0;
+}
+
+.attribution__link {
+  color: var(--color-dark-blue);
+  font-weight: 700;
+  text-decoration: none;
+  border-bottom: solid 2px currentColor;
+}
